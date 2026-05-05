@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de la Química</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      text-align: center;
+      margin: 1rem;
+    }
+
+    nav button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #4a90e2;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #4a90e2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+
+    /* Modo nocturno */
+    body.dark {
+      background-color: #1e1e2f;
+      color: #f0f0f0;
+    }
+
+    body.dark header {
+      background: #333;
+    }
+
+    body.dark nav button {
+      background: #666;
+    }
+
+    body.dark h2 {
+      color: #9cdcfe;
+    }
+
+    body.dark footer {
+      background: #2a2a3d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Historia de la Química</h1>
+    <p>Un recorrido desde la alquimia hasta la ciencia moderna</p>
+  </header>
+
+  <nav>
+    <button id="toggleBtn">🌙 Modo nocturno</button>
+  </nav>
+
+  <section>
+    <h2>Orígenes antiguos</h2>
+    <p>La química tiene raíces en la alquimia practicada en Egipto, Grecia y China, donde se buscaba transformar metales en oro y descubrir el elixir de la vida.</p>
+
+    <h2>Edad Media</h2>
+    <p>Los alquimistas islámicos como Jabir ibn Hayyan desarrollaron técnicas de destilación y cristalización, sentando bases experimentales para la química.</p>
+
+    <h2>Siglo XVII</h2>
+    <p>Robert Boyle, considerado el padre de la química moderna, introdujo el método científico y rechazó las ideas alquímicas.</p>
+
+    <h2>Siglo XVIII</h2>
+    <p>Antoine Lavoisier estableció la ley de conservación de la masa y revolucionó la química con su enfoque cuantitativo.</p>
+
+    <h2>Siglo XIX</h2>
+    <p>Se desarrolló la tabla periódica de Mendeleev y se descubrieron numerosos elementos, consolidando la química como disciplina científica.</p>
+
+    <h2>Siglo XX y XXI</h2>
+    <p>La química se expandió hacia áreas como la bioquímica, la química cuántica y la química de materiales, impactando la medicina, la tecnología y la industria.</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Historia de la Química | Proyecto educativo</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById("toggleBtn");
+    const body = document.body;
+
+    btn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+
+      if (body.classList.contains("dark")) {
+        btn.textContent = "☀️ Modo día";
+      } else {
+        btn.textContent = "🌙 Modo nocturno";
+      }
+    });
+  </script>
+</body>
+</html>
